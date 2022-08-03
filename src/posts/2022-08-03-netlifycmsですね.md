@@ -1,7 +1,8 @@
 ---
 layout: blog
 title: NetlifyCMSですね
-date: 2022-08-03T04:32:00.000Z
+author: noboru-kudo
+date: 2022-08-04
 ---
 # はじめに
 ## 見出し
