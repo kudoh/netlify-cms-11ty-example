@@ -5,12 +5,20 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <div>
+    <header style="border-bottom-style:solid;border-bottom-width:thin;">
+      {{ meta.siteName }}
+    </header>
+    <article>
       <h1>{{ title }}</h1>
       <p>author: {{ author }}</p>
-      <article>
-        {{ content | safe }}
-      </article>
-    <div>
+      {{ content | safe }}
+    <article>
+    <footer style="border-top-style:solid;border-top-width:thin;">
+      <ul>
+      {%- for link in meta.footerLinks %}
+        <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+      {%- endfor %}
+      <ul>
+    </footer>
   <body>
 </html>

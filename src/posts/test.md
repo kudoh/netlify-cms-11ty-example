@@ -1,9 +1,8 @@
 ---
-layout: blog
 title: テスト記事
 author: noboru-kudo
 publishedPath: test
-date: 2022-08-12T04:14:12.973Z
+date: 2022-08-03
 ---
 
 ## 見出し1
