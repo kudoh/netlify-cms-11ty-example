@@ -2,7 +2,7 @@
 layout: blog
 title: テスト記事
 author: noboru-kudo
-permalink: /{{ page.fileSlug }}/
+publishedPath: test
 date: 2022-08-12T04:14:12.973Z
 ---
 

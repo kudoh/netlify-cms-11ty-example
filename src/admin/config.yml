@@ -5,43 +5,40 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "./src/images"
-public_folder: "/images"
+media_folder: src/images
+public_folder: /images
 locale: ja
 collections:
   - name: blog
     label: ブログ
     create: true
-    folder: "src/posts"
+    folder: src/posts
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    view_groups:
-      - label: 公開日
-        field: date
     fields:
-      - { label: "レイアウト", name: "layout", widget: "hidden", default: "blog" }
       - { label: "記事のタイトル", name: "title", widget: "string" }
-      - { label: "執筆者", name: "author", widget: "string", pattern: ["[a-z-]+", "英小文字で記入してください。"]}
+      - { label: "公開パス", name: "publishedPath", widget: "string", pattern: ["^[a-z0-9-]+$", "英小文字、数字+ハイフンのみ"] }
+      - { label: "執筆者", name: "author", widget: "string", pattern: ["^[a-z-]+$", "英小文字のみ"]}
       - { label: "公開日", name: "date", widget: "date", date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
       - { label: "本文", name: "body", widget: "markdown" }
-      - label: "タグ"
-        name: "tags"
-        widget: "select"
+      - label: タグ
+        name: tags
+        widget: select
         multiple: true
-        options: ["netlify", "11ty", "SSG", "post", "2022年"]
-        default: ["post", "2022年"]
+        options: [netlify, 11ty, SSG, post, 2022年]
+        default: [post, 2022年]
   - name: settings
     label: 設定
     files:
       - name: site
         label: サイト全般
-        file: "src/_data/meta.json"
+        file: src/_data/meta.json
         editor:
           preview: false
         fields:
           - { label: サイト名, name: siteName, widget: string }
           - label: フッターリンク
             name: footerLinks
-            widget: "list"
+            widget: list
             collapsed: true
             summary: "{{fields.name}}:{{fields.url}}"
             fields:
