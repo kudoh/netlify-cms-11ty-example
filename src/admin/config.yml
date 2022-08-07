@@ -3,6 +3,7 @@ backend:
 #  repo: kudoh/netlify-cms-11ty-example
 #  branch: main
   name: git-gateway
+  branch: feature/netlify-identity
 
 publish_mode: editorial_workflow
 
