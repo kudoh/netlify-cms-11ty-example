@@ -9,4 +9,4 @@ tags:
 ---
 ## Netlify Identityとは
 
-Netlifyが提供するマネージド認証サービスです。
+Netlifyが提供するマネージド認証サービス
